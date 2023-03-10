@@ -1,0 +1,46 @@
+*::before,
+*,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #555;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--bgColor);
+    // background: radial-gradient(rgb(73, 47, 245) , var(--bgColor) 60%);
+}
+
+
+body.light {
+    --bgColor: #fff;
+    --bgColorComponents: #f0f0f0;
+    
+    --lines: #c0c2cacc;
+    
+    --h1Color: #222222;
+    --h2Color: #aeaeae;
+    
+    --subtitlesColor: #484848;
+
+    background: radial-gradient(rgba(49, 33, 151, 0.202) 0%, var(--bgColor) 50%);
+}
+
+body.dark {
+    --bgColor: #1d2026;
+    --bgColorComponents: #18191ccc;
+
+    --lines: #7c7f89cc;
+
+    --h1Color: #ffffff;
+    --h2Color: #8a8a8a;
+
+    --subtitlesColor: #e4e4e4;
+
+    background: radial-gradient(rgb(34, 28, 80) 1%, var(--bgColor) 40%);
+}
