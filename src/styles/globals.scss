@@ -14,6 +14,8 @@ body {
 
     background-color: var(--bgColor);
     // background: radial-gradient(rgb(73, 47, 245) , var(--bgColor) 60%);
+
+    overflow-x: hidden;
 }
 
 
@@ -32,7 +34,7 @@ body.light {
 }
 
 body.dark {
-    --bgColor: #1d2026;
+    --bgColor: #111112;
     --bgColorComponents: #18191ccc;
 
     --lines: #7c7f89cc;

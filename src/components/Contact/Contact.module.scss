@@ -1,93 +1,97 @@
 .container {
 
-    border-top: 1px solid var(--lines);
-    padding-top: 20px;
-
     width: 100%;
-    max-width: 700px;
 
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
 
-    margin: 30px 0;
+    padding: 30px 0;
 
-    h1 {
-        font-size: 22px;
-        color: var(--subtitlesColor);
-        margin-bottom: 30px;
-    }
-
-    form {
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+    .content {
 
         width: 100%;
+        max-width: 700px;
+        padding: 20px;
 
-        label {
-            margin-right: auto;
-            font-size: 14px;
-            margin-bottom: 5px;
-
+        h1 {
+            font-size: 22px;
             color: var(--subtitlesColor);
+            margin-bottom: 30px;
         }
 
-        input,
-        textarea {
-            border: 1px solid var(--lines);
-            padding: 10px;
-            width: 100%;
-            border-radius: 5px;
+        form {
 
-            outline: none;
-
-            margin-bottom: 10px;
-
-            background-color: var(--bgColor);
-
-            color: var(--h1Color);
-
-            &:focus {
-                outline: 2px solid var(--h2Color);
-            }
-        }
-
-        textarea {
-            resize: none;
-            min-height: 200px;
-            font-family: inherit;
-        }
-
-        .btn_collection {
-            width: 100%;
-            gap: 30px;
-            position: relative;
             display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
 
-            margin-top: 20px;
+            width: 100%;
 
-            button {
-                width: 50%;
-                border: none;
-                padding: 15px;
-                background-color: #f9f9f9;
-                font-family: inherit;
+            label {
+                margin-right: auto;
+                font-size: 14px;
+                margin-bottom: 5px;
 
+                color: var(--subtitlesColor);
+            }
+
+            input,
+            textarea {
+                border: 1px solid var(--lines);
+                padding: 10px;
+                width: 100%;
                 border-radius: 5px;
 
-                cursor: pointer;
+                outline: none;
 
-                &:nth-child(1) {
-                    color: var(--h1Color);
-                    background-color: var(--bgColorComponents)
+                margin-bottom: 10px;
+
+                background-color: var(--bgColor);
+
+                color: var(--h1Color);
+
+                &:focus {
+                    outline: 2px solid var(--h2Color);
                 }
+            }
 
-                &:nth-child(2) {
-                    color: #111;
-                    font-weight: 600;
+            textarea {
+                resize: none;
+                min-height: 200px;
+                font-family: inherit;
+            }
+
+            .btn_collection {
+                width: 100%;
+                gap: 30px;
+                position: relative;
+                display: flex;
+
+                margin-top: 20px;
+
+                button {
+                    width: 50%;
+                    border: none;
+                    padding: 15px;
+                    background-color: #f9f9f9;
+                    font-family: inherit;
+
+                    border-radius: 5px;
+
+                    cursor: pointer;
+
+                    &:nth-child(1) {
+                        color: var(--h1Color);
+                        background-color: var(--bgColorComponents)
+                    }
+
+                    &:nth-child(2) {
+                        color: #111;
+                        font-weight: 600;
+                    }
                 }
             }
         }

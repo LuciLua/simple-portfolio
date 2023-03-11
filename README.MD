@@ -7,6 +7,9 @@
 - Typescript
 - SASS
 
+- Framer-motion
+- Tilt
+
 ### ⬆️ Last features
 
 [x] - <b>Dark mode</b> controlled by local storage

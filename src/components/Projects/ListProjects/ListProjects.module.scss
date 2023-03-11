@@ -9,12 +9,24 @@
 
     button {
         color: var(--h1Color);
-        background-color: var(--bgColorComponents);
-        padding: 20px 15px;
+        background-color: transparent;
+
         border: none;
-        margin-bottom: 20px;
+        padding: 20px 15px;
+        width: fit-content;
+        margin: 20px auto;
+
         cursor: pointer;
+
         font-family: inherit;
+        font-weight: 300;
+
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+
+        text-decoration: underline;
     }
 
     ul {
@@ -23,7 +35,8 @@
         width: 100%;
         gap: 10px;
 
-        li, li.li_load {
+        li,
+        li.li_load {
             list-style: none;
             display: flex;
             align-items: center;
