@@ -12,6 +12,7 @@ export default function RootApp({ children }) {
                 <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <title>Simples Portfolio</title>
+                <link rel="manifest" href="manifest.json" />
             </head>
             <body className={`${ubuntu.className} light`}>
                 <BtnToggleTheme />
