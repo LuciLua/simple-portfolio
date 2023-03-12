@@ -28,48 +28,77 @@
 
         gap: 30px;
 
-
         .project {
             border-radius: 12px;
-            border: 1px solid #fff;
+            border: 1px solid var(--neonLight);
             position: relative;
             height: 200px;
 
             display: flex;
 
-            background: linear-gradient(120deg, #ddd, #eee);
+            // background: linear-gradient(120deg, #ddd, #eee);
+            background: linear-gradient(120deg, rgba(105, 88, 164, 0.187), rgba(40, 60, 192, 0.1));
             overflow: hidden;
 
             transition: 0.1s;
 
             box-shadow: 0 0 32px rgba(29, 24, 68, 0.394);
 
-            h1 {
-                font-size: 16px;
+            justify-content: center;
+            align-items: center;
 
-                margin: 0px;
-                margin-top: auto;
+            backdrop-filter: blur(10px);
+
+            h1 {
+                font-size: 21px;
+
+                margin: 20px;
 
                 z-index: 10;
-                background-color: rgba(221, 221, 221, 0.698);
-                border: 1px solid #eee;
                 height: fit-content;
-
-                backdrop-filter: blur(10px);
-                padding: 10px;
-
-                border-top-right-radius: 10px;
+                position: relative;
 
                 a {
-                    color: #444;
+                    border-radius: 30px;
+                    padding: 10px;
+
+                    color: var(--h1Color);
+                    font-weight: 700;
                     text-decoration: none;
+                    width: 100%;
+                    height: 100%;
+
+                }
+
+                .description {
+
+                    font-size: 12px;
+                    text-align: justify;
+                    max-width: 200px;
+
+                    margin-top: 10px;
+                    margin-left: 11px;
+
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+
+                    line-height: 1.5;
                 }
             }
 
             .c_preview {
-                width: 100%;
-                height: 100%;
+                width: 160px;
+                height: 160px;
                 position: absolute;
+                right: -40px;
+
+
+                border-radius: 12px;
+                overflow: hidden;
+
+                font-size: 160px;
+                color: var(--subtitlesColor);
+                opacity: 20%;
 
                 img {
                     object-fit: cover;

@@ -1,23 +1,30 @@
 'use client'
 
-import Image from "next/image"
 import styles from "./Projects.module.scss"
 
 import Tilt from "react-tilt"
 import { motion } from "framer-motion";
+import { TbBrandReact } from "react-icons/tb"
+import { IoLogoPython } from "react-icons/io"
+import { IoLogoElectron } from "react-icons/io5"
+import { GrStorage } from "react-icons/gr"
 // import { fadeIn, textVariant } from "../../utils/motion";
 
 function Projects() {
 
-    const ServiceCard = ({ title, imgPath, imgAlt, href }) => (
+    const ProjectCard = ({ title, imgPath, imgAlt, href, icon, description }) => (
         <Tilt className={styles.project} >
-            <motion.h1 whileHover={{ x: -2, backgroundColor:"rgb(210, 210, 210, 0.9)" }}>
-                <motion.a href={href}>
+            <motion.h1>
+                <motion.a href={href} whileHover={{ x: -2, backgroundColor: "rgb(210, 210, 210, 0.3)" }}>
                     {title}
                 </motion.a>
+                <motion.p className={styles.description}>
+                    {description}
+                </motion.p>
             </motion.h1>
             <div className={styles.c_preview}>
-                <Image sizes="100" src={imgPath} fill alt={imgAlt} />
+                {icon}
+                {/* <Image sizes="100" src={imgPath} fill alt={imgAlt} /> */}
             </div>
         </Tilt>
     );
@@ -27,12 +34,43 @@ function Projects() {
             <h1>My projects</h1>
             <div className={styles.projects_grid}>
                 <div className={styles.row_one}>
-                    <ServiceCard key={'dognos-project'} title="Dognos" imgPath="/dognos_preview.png" imgAlt="dognos-project" href="https://dognos.vercel.app/" />
-                    <ServiceCard key={'todo-list-project'} title="Todo List" imgPath="/todo_preview.png" imgAlt="todo-list-project" href="https://todo-lucilua.vercel.app/" />
+                    <ProjectCard
+                        icon={<TbBrandReact />}
+                        key={'dognos-project'}
+                        title="Dognos"
+                        imgPath="/dognos_preview.png"
+                        imgAlt="dognos-project"
+                        href="https://dognos.vercel.app/"
+                        description="design of a social network to share thoughts about music" />
+                    <ProjectCard
+                        icon={<GrStorage />}
+                        key={'todo-list-project'}
+                        title="Todo List"
+                        imgPath="/todo_preview.png"
+                        imgAlt="todo-list-project"
+                        href="https://todo-lucilua.vercel.app/"
+                        description="todo style list using local storage to store tasks"
+                    />
                 </div>
                 <div className={styles.row_two}>
-                    <ServiceCard key={'overtherminal_project'} title="Overtherminal" imgPath="/overtherminal_preview.png" imgAlt="overtherminal-project" href="https://github.com/LuciLua/consoleElectron" />
-                    <ServiceCard key={'CLI-python-requests-project'} title="CLI: Python requests" imgPath="/pythonCLI_preview.png" imgAlt="CLI-python-requests-project" href="https://github.com/LuciLua/python_studies_1/tree/master/requestsCli" />
+                    <ProjectCard
+                        icon={<IoLogoElectron />}
+                        key={'overtherminal_project'}
+                        title="Overtherminal"
+                        imgPath="/overtherminal_preview.png"
+                        imgAlt="overtherminal-project"
+                        href="https://github.com/LuciLua/consoleElectron"
+                        description="terminal prototype made in electron"
+                    />
+                    <ProjectCard
+                        icon={<IoLogoPython />}
+                        key={'CLI-python-requests-project'}
+                        title="CLI: Python requests"
+                        imgPath="/pythonCLI_preview.png"
+                        imgAlt="CLI-python-requests-project"
+                        href="https://github.com/LuciLua/python_studies_1/tree/master/requestsCli"
+                        description="CLI made in python to send GET and POST requests, return headers, content, cookies, etc..."
+                    />
                 </div>
             </div>
         </div >

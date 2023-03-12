@@ -29,6 +29,8 @@ body.light {
     --bgColorT50: rgba(255, 255, 255, 0.535);
     --bgColorComponents: #f0f0f0;
 
+    --neonLight: #8623ff;
+
     --lines: #c0c2cacc;
 
     --h1Color: #222222;
@@ -37,12 +39,16 @@ body.light {
     --subtitlesColor: #484848;
 
     background: radial-gradient(rgba(49, 33, 151, 0.202) 0%, var(--bgColor) 50%);
+
+    --sectionColorHightlight: rgb(250, 250, 255);
 }
 
 body.dark {
     --bgColor: #111112;
     --bgColorT50: #11111282;
     --bgColorComponents: #18191ccc;
+
+    --neonLight: #9641fe;
 
     --lines: #7c7f89cc;
 
@@ -52,4 +58,6 @@ body.dark {
     --subtitlesColor: #e4e4e4;
 
     background: radial-gradient(rgb(34, 28, 80) 1%, var(--bgColor) 40%);
+
+    --sectionColorHightlight: #111112;
 }

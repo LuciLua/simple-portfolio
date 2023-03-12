@@ -6,21 +6,23 @@
     justify-content: center;
     align-items: center;
 
+    background-color: var(--sectionColorHightlight);
+    // background-color: #2a242c;
+    
     .content {
         max-width: 700px;
         height: fit-content;
-        min-height: 400px;
-        background-color: var(--bgColor50T);
 
         display: flex;
         justify-content: center;
         flex-direction: column;
 
+        padding:  100px 0 ;
+
 
         h1 {
+            margin-bottom: 25px;
             color: var(--h1Color);
-
-
             &::selection {
                 background-color: rgba(248, 219, 103, 0.733);
                 color: rgb(25, 25, 25);
