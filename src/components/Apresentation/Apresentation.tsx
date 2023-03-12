@@ -5,7 +5,7 @@ function Apresentation() {
     return (
         <div className={styles.container}>
             <div className={styles.c_img}>
-                <Image priority={true} sizes="100" src={'/image.jpg'} alt='my photo' fill />
+                <Image priority={true} sizes="140" src={'/image.jpg'} alt='my photo' fill quality={80} />
             </div>
             <div className={styles.c_text}>
                 <h1>Hi, I'm Luci</h1>
