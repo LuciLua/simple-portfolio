@@ -23,7 +23,7 @@ function Projects() {
     );
 
     return (
-        <div className={styles.container}>
+        <div className={styles.container} id="projects">
             <h1>My projects</h1>
             <div className={styles.projects_grid}>
                 <div className={styles.row_one}>

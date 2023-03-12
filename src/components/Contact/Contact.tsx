@@ -1,10 +1,11 @@
 'use client'
 
+import Link from "next/link"
 import styles from "./Contact.module.scss"
 
 function Contact() {
     return (
-        <div className={styles.container}>
+        <div className={styles.container} id='contact'>
             <div className={styles.content}>
                 <h1>📧 Email Me</h1>
                 <form>

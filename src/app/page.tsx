@@ -1,3 +1,4 @@
+import About from "../components/About/About"
 import Apresentation from "../components/Apresentation/Apresentation"
 import Contact from "../components/Contact/Contact"
 import ListProjects from "../components/Projects/ListProjects/ListProjects"
@@ -10,6 +11,7 @@ export default function HomePage() {
             <Apresentation />
             <Projects />
             <ListProjects />
+            <About />
             <Contact />
         </div>
     )

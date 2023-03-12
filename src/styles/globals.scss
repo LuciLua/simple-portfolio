@@ -16,18 +16,24 @@ body {
     // background: radial-gradient(rgb(73, 47, 245) , var(--bgColor) 60%);
 
     overflow-x: hidden;
+
+}
+
+:root {
+    --menuHeight: 80px;
 }
 
 
 body.light {
     --bgColor: #fff;
+    --bgColorT50: rgba(255, 255, 255, 0.535);
     --bgColorComponents: #f0f0f0;
-    
+
     --lines: #c0c2cacc;
-    
+
     --h1Color: #222222;
     --h2Color: #aeaeae;
-    
+
     --subtitlesColor: #484848;
 
     background: radial-gradient(rgba(49, 33, 151, 0.202) 0%, var(--bgColor) 50%);
@@ -35,12 +41,13 @@ body.light {
 
 body.dark {
     --bgColor: #111112;
+    --bgColorT50: #11111282;
     --bgColorComponents: #18191ccc;
 
     --lines: #7c7f89cc;
 
     --h1Color: #ffffff;
-    --h2Color: #8a8a8a;
+    --h2Color: #767676;
 
     --subtitlesColor: #e4e4e4;
 

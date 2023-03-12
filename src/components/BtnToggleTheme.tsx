@@ -40,9 +40,9 @@ function BtnToggleTheme() {
                 position: "fixed",
                 background: 'transparent',
                 border: 'none',
-                margin: '10px',
+                margin: 'calc((var(--menuHeight)/8) + 20px) 20px',
                 cursor: "pointer",
-                zIndex: 20
+                zIndex: 50
             }}>
             🌙
         </button>

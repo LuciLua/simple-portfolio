@@ -1,8 +1,9 @@
 import "../styles/globals.scss"
 import { Ubuntu } from "next/font/google"
 import BtnToggleTheme from "../components/BtnToggleTheme"
+import Menu from "../components/Menu/Menu"
 
-const ubuntu = Ubuntu({ subsets: ['latin'], weight: '400' })
+const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['300', "400", "500", "700"] })
 
 export default function RootApp({ children }) {
     return (
@@ -20,6 +21,7 @@ export default function RootApp({ children }) {
             </head>
             <body className={`${ubuntu.className} light`}>
                 <BtnToggleTheme />
+                <Menu/>
                 {children}
             </body>
         </html>
