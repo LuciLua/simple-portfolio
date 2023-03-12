@@ -1,10 +1,8 @@
 "use client"
 
-import { useState, lazy } from "react"
+import { useState } from "react"
+import Lis from "./Lis"
 import styles from "./ListProjects.module.scss"
-
-
-const Lis = lazy(() => import('./Lis'));
 
 function ListProjects() {
 
