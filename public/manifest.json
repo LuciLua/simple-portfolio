@@ -4,7 +4,29 @@
     "display": "standalone",
     "description": "My simple portfolio",
     "start_url": "/",
-    "background_color": "#fff",
-    "theme_color": "#fff",
-    "orientation": "portrait-primary"
+    "background_color": "#b481f4",
+    "theme_color": "#b481f4",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/icons/icon-192x192.png",
+            "sizes": "192x",
+            "type": "image/png"
+        },
+        {
+            "src": "/icons/icon-256x256.png",
+            "sizes": "256x",
+            "type": "image/png"
+        },
+        {
+            "src": "/icons/icon-384x384.png",
+            "sizes": "384x",
+            "type": "image/png"
+        },
+        {
+            "src": "/icons/icon-512x512.png",
+            "sizes": "512x",
+            "type": "image/png"
+        }
+    ]
 }

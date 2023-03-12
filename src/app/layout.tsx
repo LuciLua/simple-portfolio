@@ -13,6 +13,7 @@ export default function RootApp({ children }) {
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <title>Simples Portfolio</title>
                 <link rel="manifest" href="manifest.json" />
+                <link rel="apple-touch-startup-image" href="images/splash/launch-640x1136.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" />
             </head>
             <body className={`${ubuntu.className} light`}>
                 <BtnToggleTheme />
