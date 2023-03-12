@@ -3,11 +3,12 @@
 import styles from "./Projects.module.scss"
 
 import Tilt from "react-tilt"
-import { motion } from "framer-motion";
+import { animate, motion } from "framer-motion";
 import { TbBrandReact } from "react-icons/tb"
 import { IoLogoPython } from "react-icons/io"
 import { IoLogoElectron } from "react-icons/io5"
 import { GrStorage } from "react-icons/gr"
+import { FcNext } from "react-icons/fc"
 // import { fadeIn, textVariant } from "../../utils/motion";
 
 function Projects() {
@@ -21,6 +22,9 @@ function Projects() {
                 <motion.p className={styles.description}>
                     {description}
                 </motion.p>
+                <motion.button className={styles.read_more}>
+                    Read more <span><FcNext /></span>
+                </motion.button>
             </motion.h1>
             <div className={styles.c_preview}>
                 {icon}

@@ -10,7 +10,7 @@
     // background-color: #2a242c;
     
     .content {
-        max-width: 700px;
+        max-width: var(--maxWidthContent);
         height: fit-content;
 
         display: flex;
@@ -57,6 +57,6 @@
 
 @media (max-width: 700px) {
     .container .content {
-        padding: 0 20px;
+        padding: 40px 20px;
     }
 }
