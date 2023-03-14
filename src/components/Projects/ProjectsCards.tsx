@@ -9,8 +9,9 @@ import { IoLogoPython } from "react-icons/io"
 import { IoLogoElectron } from "react-icons/io5"
 import { GrStorage } from "react-icons/gr"
 import { FcNext } from "react-icons/fc"
+import Link from "next/link";
 
-const ProjectCard = ({ title, href, icon, description }) => (
+const ProjectCard = ({ id, title, href, icon, description }) => (
     <Tilt className={styles.project} >
         <motion.h1>
             <motion.a href={href} whileHover={{ x: -2, backgroundColor: "rgb(210, 210, 210, 0.3)" }}>
@@ -19,9 +20,9 @@ const ProjectCard = ({ title, href, icon, description }) => (
             <motion.p className={styles.description}>
                 {description}
             </motion.p>
-            <motion.button className={styles.read_more}>
+            <Link href={`/projects/${id}`} className={styles.read_more}>
                 Read more <span><FcNext /></span>
-            </motion.button>
+            </Link>
         </motion.h1>
         <div className={styles.c_preview}>
             {icon}
@@ -34,12 +35,14 @@ function ProjectsCards() {
         <div className={styles.projects_grid}>
             <div className={styles.row_one}>
                 <ProjectCard
+                    id={"dognos"}
                     icon={<TbBrandReact />}
                     key={'dognos-project'}
                     title="Dognos"
                     href="https://dognos.vercel.app/"
                     description="design of a social network to share thoughts about music" />
                 <ProjectCard
+                    id={"todo"}
                     icon={<GrStorage />}
                     key={'todo-list-project'}
                     title="Todo List"
@@ -49,6 +52,7 @@ function ProjectsCards() {
             </div>
             <div className={styles.row_two}>
                 <ProjectCard
+                    id={"overtherminal"}
                     icon={<IoLogoElectron />}
                     key={'overtherminal_project'}
                     title="Overtherminal"
@@ -56,6 +60,7 @@ function ProjectsCards() {
                     description="terminal prototype made in electron"
                 />
                 <ProjectCard
+                    id={"pythonCLI"}
                     icon={<IoLogoPython />}
                     key={'CLI-python-requests-project'}
                     title="CLI: Python requests"

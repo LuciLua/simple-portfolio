@@ -7,13 +7,14 @@ import Projects from "../components/Projects/Projects"
 import styles from "../styles/pages/HomePage.module.scss"
 
 
-const loading = async () => {
-    await new Promise(resolve => setTimeout(resolve, 3000))
-}
+// const loading = async () => {
+//     await new Promise(resolve => setTimeout(resolve, 3000))
+// }
 
-export default async function HomePage() {
+// export default async function HomePage() {
+export default function HomePage() {
 
-    await loading()
+    // await loading()
 
     return (
         <div className={styles.container}>

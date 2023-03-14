@@ -1,0 +1,28 @@
+{
+    "projects": [
+        {
+            "id": "dognos",
+            "title": "Dognos",
+            "href": "https://dognos.vercel.app/",
+            "description": "design of a social network to share thoughts about music"
+        },
+        {
+            "id": "todo",
+            "title": "Todo List",
+            "href": "https://todo-lucilua.vercel.app/",
+            "description": "todo style list using local storage to store tasks"
+        },
+        {
+            "id": "overtherminal",
+            "title": "Overtherminal",
+            "href": "https://github.com/LuciLua/consoleElectron",
+            "description": "terminal prototype made in electron"
+        },
+        {
+            "id": "pythonCLI",
+            "title": "CLI: Python requests",
+            "href": "https://github.com/LuciLua/python_studies_1/tree/master/requestsCli",
+            "description": "CLI made in python to send GET and POST requests, return headers, content, cookies, etc..."
+        }
+    ]
+}
