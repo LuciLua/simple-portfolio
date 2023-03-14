@@ -16,7 +16,14 @@ export default function Project({ params }) {
     const [project, setProject] = useState<ProjectType>()
 
     const fetchData = async () => {
-        const data = await fetch('http://localhost:3000/db/projects.json')
+        var path;
+        if(window.location.hostname === 'localhost') {
+            path = 'localhost:3000'
+        } else {
+            path = `${window.location.hostname}`
+        }
+
+        const data = await fetch(`https://${path}/db/projects.json`)
         const result = await data.json()
         const projectsData = await result.projects
         const project = await projectsData.find(project => project.id === params.slug)
