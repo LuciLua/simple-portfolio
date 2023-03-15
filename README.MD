@@ -3,6 +3,7 @@
 ### ⚒️ Tools
 
 - React
+- React-dom
 - Next.js 13
 - Typescript
 - SASS
