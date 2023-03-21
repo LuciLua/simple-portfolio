@@ -6,6 +6,7 @@ import ListProjects from "../components/Projects/ListProjects/ListProjects"
 import Projects from "../components/Projects/Projects"
 import styles from "../styles/pages/HomePage.module.scss"
 
+// const withPWA = require('next-pwa')
 
 // const loading = async () => {
 //     await new Promise(resolve => setTimeout(resolve, 3000))
@@ -15,7 +16,6 @@ import styles from "../styles/pages/HomePage.module.scss"
 export default function HomePage() {
 
     // await loading()
-
     return (
         <div className={styles.container}>
             <Apresentation />

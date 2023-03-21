@@ -17,9 +17,13 @@ export default function Project({ params }) {
 
     const fetchData = async () => {
         var path;
-        if(window.location.hostname === 'localhost') {
+        if (window.location.hostname === 'localhost') {
             path = 'localhost:3000'
-        } else {
+        } if (window.location.hostname === '192.168.106') {
+            path = `${window.location.hostname}:3000`
+        }
+
+        else {
             path = `${window.location.hostname}`
         }
 
@@ -44,7 +48,7 @@ export default function Project({ params }) {
                     </h1>
                     <h2>{project.description}</h2>
                     <div className={styles.c_img}>
-                    <Image fill src={`/${project.id}_preview.png`} alt={project.title}/>
+                        <Image fill src={`/${project.id}_preview.png`} alt={project.title} />
                     </div>
                 </>
                 : null

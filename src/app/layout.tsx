@@ -6,6 +6,7 @@ import Menu from "../components/Menu/Menu"
 const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['300', "400", "500", "700"] })
 
 export default function RootApp({ children }) {
+
     return (
         <html lang="en">
             <head>
@@ -15,13 +16,13 @@ export default function RootApp({ children }) {
                 <title>Simples Portfolio</title>
                 <link rel="manifest" href="manifest.json" />
                 <link rel="apple-touch-startup-image" href="images/splash/launch-640x1136.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" />
-                <link rel="apple-touch-icon" href="/icons/icon-192x192.png"/>
-                <meta name="theme-color" content="#b481f4"/>
+                <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+                <meta name="theme-color" content="#b481f4" />
                 <meta name="description" content="My simple portfolio" />
             </head>
             <body className={`${ubuntu.className} light`}>
                 <BtnToggleTheme />
-                <Menu/>
+                <Menu />
                 {children}
             </body>
         </html>
