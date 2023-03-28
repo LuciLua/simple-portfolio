@@ -13,10 +13,10 @@ export default function Project({ params }) {
     const fetchData = async () => {
         const { hostname } = window.location
         var path;
-        if (hostname === 'localhost' || '192.168.0.106') {
+        if (hostname === 'localhost' || hostname === '192.168.0.106') {
             path = `http://${hostname}:3000/db/projects.json`
         }
-        else if (hostname !== 'localhost' || '192.168.0.106') {
+        else if (hostname !== 'localhost' && hostname !== '192.168.0.106') {
             path = `https://${hostname}/db/projects.json`
         }
 
