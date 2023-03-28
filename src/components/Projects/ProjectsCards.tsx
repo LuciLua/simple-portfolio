@@ -4,12 +4,18 @@ import styles from "./Projects.module.scss"
 
 import Tilt from "react-tilt"
 import { motion } from "framer-motion";
+
 import { TbBrandReact } from "react-icons/tb"
 import { IoLogoPython } from "react-icons/io"
 import { IoLogoElectron } from "react-icons/io5"
 import { GrStorage } from "react-icons/gr"
+
 import { FcNext } from "react-icons/fc"
 import Link from "next/link";
+
+import ProjectType from "../../types/project";
+
+import { useEffect, useState } from 'react'
 
 const ProjectCard = ({ id, title, href, icon, description }) => (
     <Tilt className={styles.project} >
@@ -31,42 +37,60 @@ const ProjectCard = ({ id, title, href, icon, description }) => (
 );
 
 function ProjectsCards() {
+
+    const fetchData = async () => {
+        const { hostname } = window.location
+        var path;
+        if (hostname === 'localhost' || '192.168.0.106') {
+            path = `http://${hostname}:3000/db/projects.json`
+        }
+        else if (hostname !== 'localhost' || '192.168.0.106') {
+            path = `https://${hostname}/db/projects.json`
+        }
+
+        const data = await fetch(path)
+        const result = await data.json()
+        const projectsData = await result.projects
+        setProjects(projectsData)
+    }
+
+    useEffect(() => {
+        fetchData()
+    })
+
+    const [projects, setProjects] = useState([])
+
+
     return (
         <div className={styles.projects_grid}>
             <div className={styles.row_one}>
-                <ProjectCard
-                    id={"dognos"}
-                    icon={<TbBrandReact />}
-                    key={'dognos-project'}
-                    title="Dognos"
-                    href="https://dognos.vercel.app/"
-                    description="design of a social network to share thoughts about music" />
-                <ProjectCard
-                    id={"todo"}
-                    icon={<GrStorage />}
-                    key={'todo-list-project'}
-                    title="Todo List"
-                    href="https://todo-lucilua.vercel.app/"
-                    description="todo style list using local storage to store tasks"
-                />
+                {projects ?
+                    projects.slice(0,2).map((project: ProjectType) => {
+                        return (
+                            <ProjectCard
+                                id={project.id}
+                                key={project.id}
+                                title={project.title}
+                                href={project.href}
+                                description={project.description} 
+                                icon={<TbBrandReact/>}
+                                />
+                        )
+                    }) : null}
             </div>
             <div className={styles.row_two}>
-                <ProjectCard
-                    id={"overtherminal"}
-                    icon={<IoLogoElectron />}
-                    key={'overtherminal_project'}
-                    title="Overtherminal"
-                    href="https://github.com/LuciLua/consoleElectron"
-                    description="terminal prototype made in electron"
-                />
-                <ProjectCard
-                    id={"pythonCLI"}
-                    icon={<IoLogoPython />}
-                    key={'CLI-python-requests-project'}
-                    title="CLI: Python requests"
-                    href="https://github.com/LuciLua/python_studies_1/tree/master/requestsCli"
-                    description="CLI made in python to send GET and POST requests, return headers, content, cookies, etc..."
-                />
+            {projects ?
+                    projects.slice(2,4).map((project: ProjectType) => {
+                        return (
+                            <ProjectCard
+                                id={project.id}
+                                icon={<TbBrandReact />}
+                                key={project.id}
+                                title={project.title}
+                                href={project.href}
+                                description={project.description} />
+                        )
+                    }) : null}
             </div>
         </div>
     )

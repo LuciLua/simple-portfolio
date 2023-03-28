@@ -4,30 +4,23 @@ import Image from "next/image"
 import { useEffect, useState } from "react"
 import styles from "../../../styles/pages/Project.module.scss"
 
-type ProjectType = {
-    id: string,
-    title: string,
-    href: string,
-    description: string
-}
+import ProjectType from "../../../types/project"
 
 export default function Project({ params }) {
 
     const [project, setProject] = useState<ProjectType>()
 
     const fetchData = async () => {
+        const { hostname } = window.location
         var path;
-        if (window.location.hostname === 'localhost') {
-            path = 'localhost:3000'
-        } if (window.location.hostname === '192.168.106') {
-            path = `${window.location.hostname}:3000`
+        if (hostname === 'localhost' || '192.168.0.106') {
+            path = `http://${hostname}:3000/db/projects.json`
+        }
+        else if (hostname !== 'localhost' || '192.168.0.106') {
+            path = `https://${hostname}/db/projects.json`
         }
 
-        else {
-            path = `${window.location.hostname}`
-        }
-
-        const data = await fetch(`https://${path}/db/projects.json`)
+        const data = await fetch(path)
         const result = await data.json()
         const projectsData = await result.projects
         const project = await projectsData.find(project => project.id === params.slug)
@@ -37,7 +30,6 @@ export default function Project({ params }) {
     useEffect(() => {
         fetchData()
     }, [])
-
 
     return (
         <div className={styles.container}>
@@ -53,7 +45,6 @@ export default function Project({ params }) {
                 </>
                 : null
             }
-            {/* <Image src={}/> */}
         </div >
     )
 }
