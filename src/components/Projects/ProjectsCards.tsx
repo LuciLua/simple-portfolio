@@ -38,9 +38,12 @@ const ProjectCard = ({ id, title, href, icon, description }) => (
 
 function ProjectsCards() {
 
+    const [projects, setProjects] = useState([])
+
     const fetchData = async () => {
         const { hostname } = window.location
         var path;
+
         if (hostname === 'localhost' || hostname === '192.168.0.106') {
             path = `http://${hostname}:3000/db/projects.json`
         }
@@ -56,10 +59,7 @@ function ProjectsCards() {
 
     useEffect(() => {
         fetchData()
-    })
-
-    const [projects, setProjects] = useState([])
-
+    }, [])
 
     return (
         <div className={styles.projects_grid}>

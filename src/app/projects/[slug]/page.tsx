@@ -20,12 +20,14 @@ export default function Project({ params }) {
             path = `https://${hostname}/db/projects.json`
         }
 
+
         const data = await fetch(path)
         const result = await data.json()
         const projectsData = await result.projects
         const project = await projectsData.find(project => project.id === params.slug)
         setProject(project)
     }
+
 
     useEffect(() => {
         fetchData()
